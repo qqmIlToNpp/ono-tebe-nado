@@ -1,1 +1,27 @@
 /* место для вашего кода */
+.content-section {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 360px;
+  min-height: 100px;
+  margin: auto;
+}
+.header__menu-list {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  list-style: none;
+}
+
+.header__menu-link {
+  color: #000000;
+  font-size: 18px;
+  line-height: normal;
+
+
+}
+.header__menu-item_active .header__menu-link {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
