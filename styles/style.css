@@ -138,7 +138,7 @@ li:first-child {
   gap: 68px;
   margin-top: 123px;
   margin-right: 49px;
-  position: relative;    
+  position: relative;
   z-index: 3;
 }
 
@@ -204,6 +204,7 @@ li:first-child {
   justify-content: space-between;
   width: 328px;
   min-height: 554px;
+/* height: 554px; */
   background-repeat: no-repeat;
   /* background-size: 328px 554px, cover; */
   position: relative;
@@ -236,21 +237,20 @@ li:first-child {
 т.к. текст выравнивается по нижней границе */
 
 .card__text {
-    z-index: 3;
+  z-index: 3;
   width: 254px;
-  margin: 0 40px 46px;
+  margin: 0 40px 40px; 
   color: #FFF;
   font-family: Raleway;
   font-weight: 400;
   font-size: 20px;
   font-style: normal;
-  line-height: 120%;
-  z-index: 3;
+  line-height: 120%;   
 }
 
 .lots__look-more-link {
   box-sizing: border-box;
-  margin-top: 26px;
+  margin-top: 30px;
   margin-left: 62px;
   color: #000;
   font-family: Raleway;
@@ -275,7 +275,7 @@ li:first-child {
 /* about section */
 
 .about {
-  margin: 176px 9px 0 9px;
+  margin: 179px 9px 0 9px;
   display: grid;
   grid-template-columns: 375px 1fr;
 
