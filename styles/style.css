@@ -167,7 +167,7 @@ background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   box-sizing: border-box; 
-  margin: 176px 9px 27px 33px;
+  margin: 176px 9px 0 33px;
 }
 
 .lots__heading {
@@ -180,9 +180,10 @@ background-color: rgba(0, 0, 0, 0.5);
 
   .lots__card-list {
   display: flex;
-  gap: 25px; 
+  gap: 25px;
   list-style-type: none;
   flex-wrap: wrap;
+  flex-grow: 1;
 }
 
 .card-link {
@@ -219,6 +220,15 @@ background-color: rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
 }
 
+/* межбуквенное расстояние ниже сдлано для "РР", но я думаю ошибка в макете и этот тут лишнее*/ 
+
+.letter-spacing-card-title {
+  letter-spacing: 3px;
+}
+
+/*во второй карточке с расположением текста в макете ошибка появившаяся после переделки макета, я 
+его трогать не стал для однообразия макета */
+
 .card__text {
   width: 254px;
   margin-bottom: 46px;
@@ -254,5 +264,80 @@ background-color: rgba(0, 0, 0, 0.5);
 .card_type_picture {
   background-image: url(/ono-tebe-nado/images/card-lot-03.png);
 }
+
+/* about section */
+
+
+
+
+
+
+
+
+
+
+
+.about {
+  margin: 178px 9px 0 9px;
+  display: grid;
+  grid-template-columns: 375px 1fr;
+
+}
+
+.about__logo {
+  display: flex;
+  margin-left: 70px;
+  border-radius: 50%;
+  background-color: #000;
+  width: 237px;
+  height: 237px;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__logo-image {
+  width: 148px;
+  height: 114px;
+}
+
+.about__column {
+  display: flex;
+  flex-direction: column;
+}
+
+.about__title {
+  font-family: Raleway;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-top: 97px;
+  margin-bottom: 100px;
+}
+
+.about__text {
+  display: flex;
+  padding-right: 12px;
+  font-family: Raleway;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 115%; 
+  margin-bottom: 25px;
+}
+
+.about__text:last-child {
+  margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
 
 
