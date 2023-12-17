@@ -77,7 +77,7 @@ li:first-child {
   max-width: 1100px;
   min-height: 745px;
   margin: 0 9px ;
-  background-image: url(../images/cover.png);
+  background-image: url(../images/cover.png); 
   background-repeat: no-repeat;
   background-position: top left;
   background-size: cover;
@@ -102,17 +102,17 @@ background-color: rgba(0, 0, 0, 0.5);
 }
 
 .aligned-text_left {
-  padding-top: 162px;
+  padding-top: 162px; 
   padding-left: 47px;
 }
 
 .aligned-text_center {
-  padding-top: 11px;
+  padding-top: 11px; 
   padding-left: 330px;
 }
 
 .aligned-text_right {
-  padding-top: 4px;
+  padding-top: 4px; 
   padding-right: 17px;
   text-align: right;
 }
@@ -164,7 +164,7 @@ background-color: rgba(0, 0, 0, 0.5);
 .lots {
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
+  box-sizing: border-box; 
   margin: 176px 9px 0 33px;
 }
 
@@ -173,7 +173,7 @@ background-color: rgba(0, 0, 0, 0.5);
   margin-left: 37px;
   color: #000;
   font-size: 40px;
-  text-transform: uppercase;
+  text-transform: uppercase; 
 }
 
   .lots__card-list {
@@ -194,6 +194,8 @@ background-color: rgba(0, 0, 0, 0.5);
   justify-content: space-between;
   width: 328px;
   min-height: 554px;
+  width: 328px;
+  height: 554px;
   background-repeat: no-repeat;
   background-size: 328px 554px, cover;
   position: relative;
@@ -248,7 +250,7 @@ background-color: rgba(0, 0, 0, 0.5);
   font-style: normal;
   line-height: normal;
   text-decoration-thickness: 1px;
-  text-underline-position: under;
+  text-underline-position: under; 
 }
 
 .card_type_film {
