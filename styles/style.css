@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
-  margin: 92px 24px 88px 24px;
+  margin: 89px 24px 88px 24px;
 }
 
 .header__menu {
@@ -47,7 +47,7 @@ li:first-child {
   margin-top: 2px;
 }
 
-.header__info {
+.info {
   display: grid;
   grid-column-start: 8;
   grid-column-end: 13;
@@ -58,11 +58,10 @@ li:first-child {
   line-height: 24.3px;
 }
 
-.header__info-phone,
-.header__info-email {
+.info-connection {
   flex-shrink: 0;
   width: 240px;
-  height: 24px;
+
   border-top: 3px;
   text-decoration-thickness: 1px;
   text-underline-position: under;
@@ -71,24 +70,23 @@ li:first-child {
 /* section cover 1 */
 .cover {
   position: relative;
-  top: 0;
-  left: 0;
-  z-index: -1;
   max-width: 1100px;
   min-height: 745px;
   margin: 0 9px ;
   background-image: url(../images/cover.png);
   background-repeat: no-repeat;
-  background-position: top left;
+  background-position: center;
   background-size: cover;
 }
 
 .overlay {
   position: absolute;
-  z-index: -1;
+  z-index: 2;
   width: 100%;
   height: 100%;
-background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
 }
 
 .cover__title {
@@ -96,32 +94,41 @@ background-color: rgba(0, 0, 0, 0.5);
   flex-direction: column;
   color: #ffffff;
   font-size: 100px;
-  line-height: 115%;
+  line-height: 110%;
   letter-spacing: 30px;
   text-transform: uppercase;
+  position: relative;
+  z-index: 3;
+  padding-top: 162px;
+  gap: 11px;
+}
+
+.contaner-text_left {
+  line-height: 115%;
 }
 
 .aligned-text_left {
-  padding-top: 162px;
   padding-left: 47px;
 }
 
 .aligned-text_center {
-  padding-top: 11px;
-  padding-left: 330px;
+  text-align: center;
+  letter-spacing: 28px;
 }
 
 .aligned-text_right {
-  padding-top: 4px;
-  padding-right: 17px;
+
   text-align: right;
+  letter-spacing: 28px;
+  padding-right: 20px;
 }
 
 .letter-spacing-extended {
-  color: #ffffff;
-  line-height: 115%;
-  letter-spacing: 58px;
-  text-transform: uppercase;
+  letter-spacing: 60px;
+}
+
+.no-letter-spacing {
+  letter-spacing: 28px;
 }
 
 .cover__description {
@@ -131,13 +138,15 @@ background-color: rgba(0, 0, 0, 0.5);
   gap: 68px;
   margin-top: 123px;
   margin-right: 49px;
+  position: relative;    
+  z-index: 3;
 }
 
 .cover__description-text {
   display: flex;
   align-items: center;
   color: #ffffff;
-  font-family: Raleway;
+  font-family: Raleway;        /* тут ошибка с 140пункта */
   font-weight: 400;
   font-size: 22px;
   font-style: normal;
@@ -149,7 +158,7 @@ background-color: rgba(0, 0, 0, 0.5);
 .bet-button {
   width: 252px;
   height: 52px;
-  border:  solid 1px #ffffff;
+  border:  solid 1px currentColor;
   border-radius: 0;
   color: #ffffff;
   font-family: Raleway;
@@ -165,12 +174,12 @@ background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  margin: 176px 9px 0 33px;
+  margin: 175px 9px 0 9px;
 }
 
 .lots__heading {
-  margin-bottom: 27px;
-  margin-left: 37px;
+  margin-bottom: 26px;
+  margin-left: 60px;
   color: #000;
   font-size: 40px;
   text-transform: uppercase;
@@ -178,6 +187,7 @@ background-color: rgba(0, 0, 0, 0.5);
 
   .lots__card-list {
   display: flex;
+  justify-content: center;
   gap: 25px;
   list-style-type: none;
   flex-wrap: wrap;
@@ -194,16 +204,14 @@ background-color: rgba(0, 0, 0, 0.5);
   justify-content: space-between;
   width: 328px;
   min-height: 554px;
-  height: 554px;
   background-repeat: no-repeat;
-  background-size: 328px 554px, cover;
+  /* background-size: 328px 554px, cover; */
   position: relative;
-  z-index: -1;
+
 }
 
 .card__title {
-  margin-top: 48px;
-  margin-left: 39px;
+  margin: 48px 38px 0;
   color: #FFF;
   font-family: Raleway;
   font-weight: 700;
@@ -215,6 +223,7 @@ background-color: rgba(0, 0, 0, 0.5);
   text-decoration-skip-ink: none;
   text-underline-offset: 2px;
   text-transform: uppercase;
+  z-index: 3;
 }
 
 /* межбуквенное расстояние ниже сдлано для "РР", но я думаю ошибка в макете и этот тут лишнее*/ 
@@ -227,21 +236,22 @@ background-color: rgba(0, 0, 0, 0.5);
 т.к. текст выравнивается по нижней границе */
 
 .card__text {
+    z-index: 3;
   width: 254px;
-  margin-bottom: 46px;
-  margin-left: 39px;
+  margin: 0 40px 46px;
   color: #FFF;
   font-family: Raleway;
   font-weight: 400;
   font-size: 20px;
   font-style: normal;
   line-height: 120%;
+  z-index: 3;
 }
 
 .lots__look-more-link {
   box-sizing: border-box;
-  margin-top: 29px;
-  margin-left: 39px;
+  margin-top: 26px;
+  margin-left: 62px;
   color: #000;
   font-family: Raleway;
   font-weight: 400;
@@ -289,23 +299,23 @@ background-color: rgba(0, 0, 0, 0.5);
 
 /* по заданию заголовок должен быть по центру логотипа (по РР не сходится)*/
 
+
 .about__column {
   display: flex;
   flex-direction: column;
-  margin-left: 2px;
+  margin-left: 386px;
+  margin-top: 7px;
 }
 
 .about__title {
   display: flex;
   align-items: center;
-  height: 237px;
   font-family: Raleway;
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   text-transform: uppercase;
-  margin-bottom: 8px;
 }
 
 .about__text {
@@ -331,18 +341,7 @@ background-color: rgba(0, 0, 0, 0.5);
   justify-content: space-between;
 }
 
-.footer__info {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  font-weight: 400;
-  font-size: 18px;
-  font-style: normal;
-  line-height: 24.3px;
-}
-
-.footer__info-phone,
-.footer__info-email {
+.info-connection {
   flex-shrink: 0;
   width: 240px;
   height: 24px;
