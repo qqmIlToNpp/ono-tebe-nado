@@ -27,7 +27,8 @@ li:first-child {
   list-style: none;
 }
 
-.header__menu-item_active .header__menu-link {
+.header__menu-link_active 
+.header__menu-link {
   text-decoration: none;
 }
 
@@ -52,9 +53,6 @@ li:first-child {
   grid-column-end: 13;
   justify-content: end;
   padding-right: 30px;
-  color: #000;
-  font-family: Raleway;
-  font-weight: 400;
   font-size: 18px;
   font-style: normal;
   line-height: 24.3px;
@@ -226,8 +224,8 @@ background-color: rgba(0, 0, 0, 0.5);
   letter-spacing: 3px;
 }
 
-/*во второй карточке с расположением текста в макете ошибка появившаяся после переделки макета, я 
-его трогать не стал для однообразия макета */
+/*во второй карточке с расположением текста в макете ошибка появившаяся после переделки макета,
+т.к. текст выравнивается по нижней границе */
 
 .card__text {
   width: 254px;
@@ -256,29 +254,19 @@ background-color: rgba(0, 0, 0, 0.5);
 }
 
 .card_type_film {
-  background-image: url(/ono-tebe-nado/images/card-lot-01.png);
+  background-image: url(../images/card-lot-01.png);
 }
 .card_type_book {
-  background-image: url(/ono-tebe-nado/images/card-lot-02.png);
+  background-image: url(../images/card-lot-02.png);
 }
 .card_type_picture {
-  background-image: url(/ono-tebe-nado/images/card-lot-03.png);
+  background-image: url(../images/card-lot-03.png);
 }
 
 /* about section */
 
-
-
-
-
-
-
-
-
-
-
 .about {
-  margin: 178px 9px 0 9px;
+  margin: 176px 9px 0 9px;
   display: grid;
   grid-template-columns: 375px 1fr;
 
@@ -300,20 +288,25 @@ background-color: rgba(0, 0, 0, 0.5);
   height: 114px;
 }
 
+/* по заданию заголовок должен быть по центру логотипа (по РР не сходится)*/
+
 .about__column {
   display: flex;
   flex-direction: column;
+  margin-left: 2px;
 }
 
 .about__title {
+  display: flex;
+  align-items: center;
+  height: 237px;
   font-family: Raleway;
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   text-transform: uppercase;
-  margin-top: 97px;
-  margin-bottom: 100px;
+  margin-bottom: 8px;
 }
 
 .about__text {
@@ -331,11 +324,67 @@ background-color: rgba(0, 0, 0, 0.5);
   margin-bottom: 0;
 }
 
+/* footer */
+
+.footer {
+  display: flex;
+  margin: 182px 58px 89px 58px;
+  justify-content: space-between;
+}
+
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 24.3px;
+}
+
+.footer__info-phone,
+.footer__info-email {
+  flex-shrink: 0;
+  width: 240px;
+  height: 24px;
+  border-top: 3px;
+  text-decoration-thickness: 1px;
+  text-underline-position: under;
+}
+
+.footer__menu-item {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.1px;
+  text-underline-position: under;
+}
 
 
+.footer__menu-link_active .footer__menu-link {
+  text-decoration: none;
+}
 
+.footer__menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  font-family: Raleway;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  line-height: 21.5px;
+}
 
+.footer__social-list {
+  display: flex;
+  list-style-type: none;
+  gap: 46px;
+}
 
+.footer__social-icon {
+  height: 48px;
+}
 
 
 
