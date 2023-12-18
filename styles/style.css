@@ -335,6 +335,7 @@ li:first-child {
   font-weight: 400;
   line-height: 115%;
   margin-bottom: 25px;
+  padding-right: 11px;
 }
 
 .about__text:last-child {
