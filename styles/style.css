@@ -1,14 +1,15 @@
 .header {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(14, 1fr);
   align-items: center;
+
   margin: 89px 24px 88px 24px;
 }
 
 .header__menu {
   display: grid;
   grid-column-start: 1;
-  grid-column-end: 6;
+  grid-column-end: 7;
   justify-content: start;
 }
 
@@ -32,10 +33,11 @@ li:first-child {
   text-decoration: none;
 }
 
-.header__logo {
-  grid-column-start: 6;
-  grid-column-end: 8;
+.header__logo { 
+  grid-column-start: 7;
+  grid-column-end: 9;
   justify-self: center;
+  justify-content: end;
   align-self: center;
   box-sizing: border-box;
 }
@@ -48,14 +50,15 @@ li:first-child {
 }
 
 .info {
-  display: grid;
-  grid-column-start: 8;
-  grid-column-end: 13;
-  justify-content: end;
-  padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column-start: 11;
+  grid-column-end: 15;
   font-size: 18px;
   font-style: normal;
   line-height: 24.3px;
+  align-items: center;
 }
 
 .info-connection {
@@ -84,14 +87,24 @@ li:first-child {
   z-index: 2;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0.6;
+  background: #000;
   top: 0;
   left: 0;
 }
 
+.cover__block {
+  padding-top: 165px;
+  padding-left: 48px;
+  padding-right: 48px;
+  
+}
+
 .cover__title {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(14, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   color: #ffffff;
   font-size: 100px;
   line-height: 110%;
@@ -99,36 +112,36 @@ li:first-child {
   text-transform: uppercase;
   position: relative;
   z-index: 3;
-  padding-top: 162px;
-  gap: 11px;
-}
-
-.contaner-text_left {
-  line-height: 115%;
+  row-gap: 12px;
 }
 
 .aligned-text_left {
-  padding-left: 47px;
+  grid-column: 1/4;
+  grid-row-start: 1;
 }
 
 .aligned-text_center {
-  text-align: center;
+  display: flex;
+  grid-column: 5/11;
+  grid-row-start: 2;
   letter-spacing: 28px;
 }
 
 .aligned-text_right {
-
-  text-align: right;
+  grid-column: 9/15;
+  grid-row-start: 3;
   letter-spacing: 28px;
-  padding-right: 20px;
+  text-align: right;
+
 }
 
 .letter-spacing-extended {
   letter-spacing: 60px;
+  line-height: 110%;
 }
 
 .no-letter-spacing {
-  letter-spacing: 28px;
+  letter-spacing: 0px;
 }
 
 .cover__description {
@@ -146,7 +159,7 @@ li:first-child {
   display: flex;
   align-items: center;
   color: #ffffff;
-  font-family: Raleway;        /* тут ошибка с 140пункта */
+  font-family: Raleway;
   font-weight: 400;
   font-size: 22px;
   font-style: normal;
@@ -204,21 +217,15 @@ li:first-child {
   justify-content: space-between;
   width: 328px;
   min-height: 554px;
-/* height: 554px; */
   background-repeat: no-repeat;
-  /* background-size: 328px 554px, cover; */
   position: relative;
-
 }
 
 .card__title {
   margin: 48px 38px 0;
   color: #FFF;
-  font-family: Raleway;
-  font-weight: 700;
   font-size: 22px;
-  font-style: normal;
-  line-height: 120%; /* 26.4px */
+  line-height: 120%;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-decoration-skip-ink: none;
@@ -233,19 +240,19 @@ li:first-child {
   letter-spacing: 3px;
 }
 
-/*во второй карточке с расположением текста в макете ошибка появившаяся после переделки макета,
-т.к. текст выравнивается по нижней границе */
+/*во второй карточке с расположением текста в макете ошибка он наезжает на заголовок */
 
 .card__text {
   z-index: 3;
   width: 254px;
-  margin: 0 40px 40px; 
+  margin: 0 40px 40px;
+  /* тут нужно править */
   color: #FFF;
   font-family: Raleway;
   font-weight: 400;
   font-size: 20px;
   font-style: normal;
-  line-height: 120%;   
+  line-height: 120%;
 }
 
 .lots__look-more-link {
@@ -275,10 +282,15 @@ li:first-child {
 /* about section */
 
 .about {
+  display: flex;
   margin: 179px 9px 0 9px;
+}
+
+
+.about__logo-text {
   display: grid;
   grid-template-columns: 375px 1fr;
-
+  
 }
 
 .about__logo {
@@ -297,25 +309,21 @@ li:first-child {
   height: 114px;
 }
 
+.about__title {
+  display: flex;
+  align-items: center;
+  font-family: Raleway;
+  font-size: 40px;
+  line-height: normal;
+  text-transform: uppercase;
+}
 /* по заданию заголовок должен быть по центру логотипа (по РР не сходится)*/
-
 
 .about__column {
   display: flex;
   flex-direction: column;
   margin-left: 386px;
   margin-top: 7px;
-}
-
-.about__title {
-  display: flex;
-  align-items: center;
-  font-family: Raleway;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  text-transform: uppercase;
 }
 
 .about__text {
@@ -382,8 +390,3 @@ li:first-child {
 .footer__social-icon {
   height: 48px;
 }
-
-
-
-
-
