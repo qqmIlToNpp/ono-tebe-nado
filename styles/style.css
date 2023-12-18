@@ -33,7 +33,7 @@ li:first-child {
   text-decoration: none;
 }
 
-.header__logo { 
+.header__logo {
   grid-column-start: 7;
   grid-column-end: 9;
   justify-self: center;
@@ -58,13 +58,12 @@ li:first-child {
   font-size: 18px;
   font-style: normal;
   line-height: 24.3px;
-  align-items: center;
 }
 
 .info-connection {
   flex-shrink: 0;
   width: 240px;
-
+  height: 24px;
   border-top: 3px;
   text-decoration-thickness: 1px;
   text-underline-position: under;
@@ -125,6 +124,7 @@ li:first-child {
   grid-column: 5/11;
   grid-row-start: 2;
   letter-spacing: 28px;
+
 }
 
 .aligned-text_right {
@@ -149,7 +149,7 @@ li:first-child {
   justify-content: flex-end;
   align-items: center;
   gap: 68px;
-  margin-top: 123px;
+  margin-top: 124px;
   margin-right: 49px;
   position: relative;
   z-index: 3;
@@ -187,7 +187,7 @@ li:first-child {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  margin: 175px 9px 0 9px;
+  margin: 176px 9px 0 9px;
 }
 
 .lots__heading {
@@ -245,7 +245,7 @@ li:first-child {
 .card__text {
   z-index: 3;
   width: 254px;
-  margin: 0 40px 40px;
+  margin: 0 40px 38px;
   /* тут нужно править */
   color: #FFF;
   font-family: Raleway;
@@ -349,14 +349,8 @@ li:first-child {
   justify-content: space-between;
 }
 
-.info-connection {
-  flex-shrink: 0;
-  width: 240px;
-  height: 24px;
-  border-top: 3px;
-  text-decoration-thickness: 1px;
-  text-underline-position: under;
-}
+
+
 
 .footer__menu-item {
   text-decoration-thickness: 1px;
