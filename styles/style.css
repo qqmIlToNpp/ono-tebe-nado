@@ -69,16 +69,39 @@ li:first-child {
   text-underline-position: under;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* section cover 1 */
 .cover {
-  position: relative;
-  max-width: 1100px;
-  min-height: 745px;
-  margin: 0 9px ;
+/* padding: 0 10px 10px; */
   background-image: url(../images/cover.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  position: relative;
+  max-width: 1100px;
+  min-height: 745px;
+  margin: 0 9px ;
+  /* z-index: -1; */
 }
 
 .overlay {
@@ -92,56 +115,48 @@ li:first-child {
   left: 0;
 }
 
-.cover__block {
-  padding-top: 165px;
-  padding-left: 48px;
-  padding-right: 48px;
-  
-}
+
+
+
+
 
 .cover__title {
-  display: grid;
-  align-items: center;
-  grid-template-columns: repeat(14, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
   color: #ffffff;
   font-size: 100px;
   line-height: 110%;
   letter-spacing: 30px;
   text-transform: uppercase;
-  position: relative;
+  position: relative; 
   z-index: 3;
-  row-gap: 12px;
+  padding: 162px 48px 0;
 }
 
 .aligned-text_left {
-  grid-column: 1/4;
-  grid-row-start: 1;
+  display: block;
+  line-height: 115%;
 }
 
 .aligned-text_center {
-  display: flex;
-  grid-column: 5/11;
-  grid-row-start: 2;
+  display: block;
   letter-spacing: 28px;
-
+  align-self: center;
 }
 
 .aligned-text_right {
-  grid-column: 9/15;
-  grid-row-start: 3;
+  display: block;
   letter-spacing: 28px;
-  text-align: right;
-
+  align-self: end;
 }
 
 .letter-spacing-extended {
   letter-spacing: 60px;
-  line-height: 110%;
 }
 
 .no-letter-spacing {
-  letter-spacing: 0px;
+  letter-spacing: normal;
 }
 
 .cover__description {
@@ -159,7 +174,7 @@ li:first-child {
   display: flex;
   align-items: center;
   color: #ffffff;
-  font-family: Raleway;
+  font-family: Raleway, Arial, Helvetica, sans-serif; 
   font-weight: 400;
   font-size: 22px;
   font-style: normal;
@@ -174,7 +189,7 @@ li:first-child {
   border:  solid 1px currentColor;
   border-radius: 0;
   color: #ffffff;
-  font-family: Raleway;
+  font-family: Raleway, Arial, Helvetica, sans-serif;
   font-size: 22px;
   text-align: center;
   text-transform: uppercase;
@@ -248,7 +263,7 @@ li:first-child {
   margin: 0 40px 38px;
   /* тут нужно править */
   color: #FFF;
-  font-family: Raleway;
+  font-family: Raleway, Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 20px;
   font-style: normal;
@@ -260,7 +275,7 @@ li:first-child {
   margin-top: 30px;
   margin-left: 62px;
   color: #000;
-  font-family: Raleway;
+  font-family: Raleway, Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 20px;
   font-style: normal;
@@ -284,13 +299,12 @@ li:first-child {
 .about {
   display: flex;
   margin: 179px 9px 0 9px;
+  flex-direction: column;
 }
 
-
-.about__logo-text {
+.about__logo-title {
   display: grid;
   grid-template-columns: 375px 1fr;
-  
 }
 
 .about__logo {
@@ -310,31 +324,32 @@ li:first-child {
 }
 
 .about__title {
-  display: flex;
-  align-items: center;
-  font-family: Raleway;
+  /* display: flex; */
+  align-self: center;
+  font-family: Raleway, Arial, Helvetica, sans-serif;
   font-size: 40px;
   line-height: normal;
   text-transform: uppercase;
 }
+
 /* по заданию заголовок должен быть по центру логотипа (по РР не сходится)*/
 
 .about__column {
   display: flex;
   flex-direction: column;
-  margin-left: 386px;
+  margin-left: 378px;
   margin-top: 7px;
 }
 
 .about__text {
   display: flex;
-  padding-right: 12px;
-  font-family: Raleway;
+  margin-right: 10px;
+  margin-bottom: 25px;
+  font-family: Raleway, Arial, Helvetica, sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 115%;
-  margin-bottom: 25px;
 }
 
 .about__text:last-child {
@@ -348,9 +363,6 @@ li:first-child {
   margin: 182px 58px 89px 58px;
   justify-content: space-between;
 }
-
-
-
 
 .footer__menu-item {
   text-decoration-thickness: 1px;
@@ -368,7 +380,7 @@ li:first-child {
   flex-direction: column;
   align-items: center;
   list-style-type: none;
-  font-family: Raleway;
+  font-family: Raleway, Arial, Helvetica, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
