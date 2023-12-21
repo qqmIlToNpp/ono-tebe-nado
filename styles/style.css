@@ -1,22 +1,18 @@
 .header {
   display: grid;
-  grid-template-columns: repeat(14, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   align-items: center;
-
-  margin: 89px 24px 88px 24px;
+  margin: 90px 24px 92px 24px;
 }
 
 .header__menu {
-  display: grid;
-  grid-column-start: 1;
-  grid-column-end: 7;
+  grid-column:1/6;
   justify-content: start;
 }
 
 .header__menu-list {
   display: flex;
   gap: 32px;
-  padding-left: 35px;
   font-size: 18px;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.5px;
@@ -28,18 +24,14 @@ li:first-child {
   list-style: none;
 }
 
-.header__menu-link_active 
+.header__menu-link_active
 .header__menu-link {
   text-decoration: none;
 }
 
 .header__logo {
-  grid-column-start: 7;
-  grid-column-end: 9;
+  grid-column: 6/8;
   justify-self: center;
-  justify-content: end;
-  align-self: center;
-  box-sizing: border-box;
 }
 
 .header__logo-image {
@@ -52,16 +44,14 @@ li:first-child {
 .info {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  grid-column-start: 11;
-  grid-column-end: 15;
+  align-items: end;
+  grid-column:8/13;
   font-size: 18px;
   font-style: normal;
   line-height: 24.3px;
 }
 
 .info-connection {
-  flex-shrink: 0;
   width: 240px;
   height: 24px;
   border-top: 3px;
@@ -69,39 +59,19 @@ li:first-child {
   text-underline-position: under;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.info-adress {
+  width: 240px;
+}
 
 /* section cover 1 */
+
 .cover {
-/* padding: 0 10px 10px; */
   background-image: url(../images/cover.png);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top center;
   background-size: cover;
   position: relative;
-  max-width: 1100px;
-  min-height: 745px;
-  margin: 0 9px ;
-  /* z-index: -1; */
+  min-height: 757px; 
 }
 
 .overlay {
@@ -115,23 +85,17 @@ li:first-child {
   left: 0;
 }
 
-
-
-
-
-
 .cover__title {
   display: flex;
   flex-direction: column;
-  row-gap: 12px;
+  gap: 20px;
   color: #ffffff;
   font-size: 100px;
-  line-height: 110%;
   letter-spacing: 30px;
   text-transform: uppercase;
   position: relative; 
   z-index: 3;
-  padding: 162px 48px 0;
+  padding: 165px 24px 0;
 }
 
 .aligned-text_left {
@@ -141,14 +105,16 @@ li:first-child {
 
 .aligned-text_center {
   display: block;
-  letter-spacing: 28px;
-  align-self: center;
+  letter-spacing: 30px;
+  text-align: center;
+  line-height: 100%;
 }
 
 .aligned-text_right {
   display: block;
-  letter-spacing: 28px;
-  align-self: end;
+  letter-spacing: 30px;
+  text-align: end;
+  line-height: 100%;
 }
 
 .letter-spacing-extended {
@@ -162,10 +128,8 @@ li:first-child {
 .cover__description {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
-  gap: 68px;
-  margin-top: 124px;
-  margin-right: 49px;
+  gap: 78px;
+  margin: 134px 24px 0;
   position: relative;
   z-index: 3;
 }
@@ -184,7 +148,7 @@ li:first-child {
 }
 
 .bet-button {
-  width: 252px;
+  width: 257px;
   height: 52px;
   border:  solid 1px currentColor;
   border-radius: 0;
@@ -202,13 +166,12 @@ li:first-child {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  margin: 176px 9px 0 9px;
+  margin: 180px 24px 0 24px;
 }
 
 .lots__heading {
-  margin-bottom: 26px;
-  margin-left: 60px;
-  color: #000;
+  margin-bottom: 27px;
+  padding-left: 26px;
   font-size: 40px;
   text-transform: uppercase;
 }
@@ -219,7 +182,11 @@ li:first-child {
   gap: 25px;
   list-style-type: none;
   flex-wrap: wrap;
+}
+
+.lots__card-list-item {
   flex-grow: 1;
+  width: 334px;
 }
 
 .card-link {
@@ -230,14 +197,14 @@ li:first-child {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 328px;
-  min-height: 554px;
-  background-repeat: no-repeat;
+  min-height: 600px;
+  background-size: cover;
+  background-position: center;
   position: relative;
 }
 
 .card__title {
-  margin: 48px 38px 0;
+  margin: 50px 40px 0;
   color: #FFF;
   font-size: 22px;
   line-height: 120%;
@@ -255,13 +222,12 @@ li:first-child {
   letter-spacing: 3px;
 }
 
-/*во второй карточке с расположением текста в макете ошибка он наезжает на заголовок */
+/* в первой карточке ошибка макета, куратор подтвердила */
 
 .card__text {
   z-index: 3;
   width: 254px;
-  margin: 0 40px 38px;
-  /* тут нужно править */
+  margin: 0 40px 50px;
   color: #FFF;
   font-family: Raleway, Arial, Helvetica, sans-serif;
   font-weight: 400;
@@ -272,8 +238,7 @@ li:first-child {
 
 .lots__look-more-link {
   box-sizing: border-box;
-  margin-top: 30px;
-  margin-left: 62px;
+  margin: 30px 0 0 26px;
   color: #000;
   font-family: Raleway, Arial, Helvetica, sans-serif;
   font-weight: 400;
@@ -287,9 +252,11 @@ li:first-child {
 .card_type_film {
   background-image: url(../images/card-lot-01.png);
 }
+
 .card_type_book {
   background-image: url(../images/card-lot-02.png);
 }
+
 .card_type_picture {
   background-image: url(../images/card-lot-03.png);
 }
@@ -298,52 +265,53 @@ li:first-child {
 
 .about {
   display: flex;
-  margin: 179px 9px 0 9px;
+  margin: 180px 24px 0 24px;
   flex-direction: column;
 }
 
 .about__logo-title {
-  display: grid;
-  grid-template-columns: 375px 1fr;
+  display: flex;
+  gap: 25px;
 }
 
 .about__logo {
   display: flex;
-  margin-left: 70px;
   border-radius: 50%;
   background-color: #000;
-  width: 237px;
-  height: 237px;
+  width: 240px;
+  height: 240px;
   align-items: center;
   justify-content: center;
+  margin: 0 95px;
 }
 
 .about__logo-image {
-  width: 148px;
+  ax-width: 148px;
   height: 114px;
 }
 
+/* по заданию заголовок должен быть по центру логотипа (по макету РР не сходится)*/
+
 .about__title {
-  /* display: flex; */
-  align-self: center;
+  display: flex;
+  /* margin-top: 102px; */
+  align-items: center;
   font-family: Raleway, Arial, Helvetica, sans-serif;
   font-size: 40px;
   line-height: normal;
   text-transform: uppercase;
 }
 
-/* по заданию заголовок должен быть по центру логотипа (по РР не сходится)*/
-
 .about__column {
   display: flex;
   flex-direction: column;
-  margin-left: 378px;
-  margin-top: 7px;
+  margin-left: 455px;
+  margin-top: 10px;
+  align-items: end;
 }
 
 .about__text {
   display: flex;
-  margin-right: 10px;
   margin-bottom: 25px;
   font-family: Raleway, Arial, Helvetica, sans-serif;
   font-size: 20px;
@@ -360,7 +328,7 @@ li:first-child {
 
 .footer {
   display: flex;
-  margin: 182px 58px 89px 58px;
+  margin: 180px 24px 0 24px;
   justify-content: space-between;
 }
 
@@ -369,7 +337,6 @@ li:first-child {
   text-underline-offset: 0.1px;
   text-underline-position: under;
 }
-
 
 .footer__menu-link_active .footer__menu-link {
   text-decoration: none;
@@ -390,7 +357,7 @@ li:first-child {
 .footer__social-list {
   display: flex;
   list-style-type: none;
-  gap: 46px;
+  gap: 48px;
 }
 
 .footer__social-icon {
