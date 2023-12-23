@@ -53,7 +53,6 @@ li:first-child {
 
 .info-connection {
   width: 240px;
-  height: 24px;
   border-top: 3px;
   text-decoration-thickness: 1px;
   text-underline-position: under;
@@ -68,10 +67,10 @@ li:first-child {
 .cover {
   background-image: url(../images/cover.png);
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center;
   background-size: cover;
   position: relative;
-  min-height: 757px; 
+  min-height: 757px;
 }
 
 .overlay {
@@ -93,7 +92,7 @@ li:first-child {
   font-size: 100px;
   letter-spacing: 30px;
   text-transform: uppercase;
-  position: relative; 
+  position: relative;
   z-index: 3;
   padding: 165px 24px 0;
 }
@@ -105,14 +104,12 @@ li:first-child {
 
 .aligned-text_center {
   display: block;
-  letter-spacing: 30px;
   text-align: center;
   line-height: 100%;
 }
 
 .aligned-text_right {
   display: block;
-  letter-spacing: 30px;
   text-align: end;
   line-height: 100%;
 }
@@ -138,7 +135,7 @@ li:first-child {
   display: flex;
   align-items: center;
   color: #ffffff;
-  font-family: Raleway, Arial, Helvetica, sans-serif; 
+  font-family: Raleway, Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 22px;
   font-style: normal;
@@ -286,7 +283,7 @@ li:first-child {
 }
 
 .about__logo-image {
-  ax-width: 148px;
+  width: 148px;
   height: 114px;
 }
 
@@ -338,7 +335,8 @@ li:first-child {
   text-underline-position: under;
 }
 
-.footer__menu-link_active .footer__menu-link {
+.footer__menu-link_active
+.footer__menu-link {
   text-decoration: none;
 }
 
