@@ -67,7 +67,7 @@ li:first-child {
 .cover {
   background-image: url(../images/cover.png);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   position: relative;
   min-height: 757px;
